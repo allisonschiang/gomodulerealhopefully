@@ -1,0 +1,17 @@
+{
+  "$schema": "https://dl.viam.dev/module.schema.json",
+  "module_id": "allisonorg:gomodulerealhopefully",
+  "visibility": "private",
+  "url": "",
+  "description": "Modular arm component: arm",
+  "applications": null,
+  "markdown_link": "README.md",
+  "entrypoint": "bin\\gomodulerealhopefully.exe",
+  "first_run": "",
+  "build": {
+    "build": "go build -tags no_cgo -o bin\\gomodulerealhopefully.exe cmd/module/main.go \u0026\u0026 tar czf module.tar.gz meta.json bin/gomodulerealhopefully.exe",
+    "setup": "go mod tidy",
+    "path": "module.tar.gz",
+    "arch":  ["linux/amd64", "linux/arm64", "darwin/arm64", "windows/amd64"]
+  }
+}
